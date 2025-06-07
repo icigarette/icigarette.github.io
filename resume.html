@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历</title>
+    <style>
+        /* 全局样式 - 设置整个页面的基本样式 */
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        /* 简历容器 - 控制整个简历的大小和位置 */
+        .resume-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        /* 头部样式 - 包含名字和职位 */
+        .header {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        /* 头像区域样式 */
+        .avatar-container {
+            margin: 0 auto 20px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.3);
+            overflow: hidden;
+            background: #e0e0e0;
+        }
+        
+        .avatar-placeholder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        
+        /* 主要内容区域样式 */
+        .main-content {
+            display: flex;
+            padding: 30px;
+        }
+        
+        /* 左侧栏样式 */
+        .sidebar {
+            flex: 1;
+            padding-right: 30px;
+            border-right: 1px solid #eee;
+        }
+        
+        /* 右侧栏样式 */
+        .main-section {
+            flex: 2;
+            padding-left: 30px;
+        }
+        
+        /* 部分标题样式 */
+        .section-title {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+        
+        /* 列表样式 */
+        .contact-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .contact-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-icon {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            background: #3498db;
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        /* 修改技能列表样式 */
+        .skill-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skill-list li {
+            margin-bottom: 10px;
+            padding-left: 0;
+        }
+
+        .skill-list li strong {
+            font-weight: bold;
+        }
+        
+        /* 教育经历样式 */
+        .education-item {
+            margin-bottom: 25px;
+        }
+        
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .school {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .date {
+            background: #3498db;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 14px;
+        }
+        
+        .major {
+            color: #3498db;
+            margin-bottom: 8px;
+        }
+        
+        /* 页脚样式 */
+        .footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+        
+        /* 响应式设计 - 当屏幕小于700px时改变布局 */
+        @media (max-width: 700px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                padding-right: 0;
+                border-right: none;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 30px;
+                margin-bottom: 30px;
+            }
+            
+            .main-section {
+                padding-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 简历整体容器 -->
+    <div class="resume-container">
+        <!-- 头部区域 -->
+        <header class="header">
+            <!-- 头像容器 -->
+            <div class="avatar-container">
+                <div class="avatar-placeholder">
+                    头像
+                </div>
+            </div>
+            <h1>梁同学</h1>
+            <h2>后端开发工程师</h2>
+        </header>
+        
+        <!-- 主体内容区域 -->
+        <main class="main-content">
+            <!-- 左侧边栏 -->
+            <div class="sidebar">
+                <!-- 联系方式 -->
+                <section>
+                    <h3 class="section-title">联系方式</h3>
+                    <ul class="contact-list">
+                        <li>
+                            <span class="contact-icon">📧</span>
+                            <span>zhaofan.l@foxmail.com</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon">📱</span>
+                            <span>136xxxxxxxx</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon">🏠</span>
+                            <span>广州市天河区</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon">💼</span>
+                            <span>离校，周内到岗</span>
+                        </li>
+                    </ul>
+                </section>
+                
+                <!-- 专业技能 -->
+                <section>
+                    <h3 class="section-title">专业技能</h3>
+                    <ul class="skill-list">
+                        <li><strong>Java：</strong>熟练掌握集合、异常、反射等基础，具备良好的面向对象编程思想</li>
+                        <li><strong>JUC：</strong>熟悉JUC并发编程，了解常用锁机制、CAS、AQS、线程池等实现原理</li>
+                        <li><strong>JVM：</strong>熟悉JVM的基本原理，对JVM内存划分、垃圾回收等有了解</li>
+                        <li><strong>MySQL：</strong>熟悉MySQL的基本语法，熟悉索引、存储引擎、事务、MVCC、锁等相关知识</li>
+                        <li><strong>Redis：</strong>熟悉Redis缓存和分布式锁相关知识，熟悉Redis的缓存击穿、缓存穿透、缓存雪崩现象以及解决方案</li>
+                    </ul>
+                </section>
+            </div>
+            
+            <!-- 右侧主内容区 -->
+            <div class="main-section">
+                <!-- 教育经历 -->
+                <section>
+                    <h3 class="section-title">教育经历</h3>
+                    <div class="education-item">
+                        <div class="education-header">
+                            <div class="school">广东工业大学</div>
+                            <div class="date">2021-2025</div>
+                        </div>
+                        <div class="major">信息管理与信息系统 | 本科</div>
+                        <p>
+                            主修课程：JavaWeb应用开发(95)、Java程序设计语言(92)、数据结构、计算机网络、数据库原理等
+                        </p>
+                    </div>           
+                </section>
+                
+                <!-- 项目经历 -->
+                <section>
+                    <h3 class="section-title">项目经历</h3>
+                    <div class="education-item">
+                        <div class="education-header">
+                            <div class="school">TasteSpot点评</div>
+                            <div class="date">2025.01-2025.03</div>
+                        </div>
+                        <div class="major">后端开发</div>
+                        <p>
+                            负责开发短信验证码登录、商户查询缓存、优惠券秒杀、发表评论等功能，为C端用户提供流畅的交互体验
+                        </p>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="education-header">
+                            <div class="school">QuickServe外卖平台</div>
+                            <div class="date">2024.9-2024.11</div>
+                        </div>
+                        <div class="major">后端开发</div>
+                        <p>
+                            为管理员后台与小程序客户端提供 RESTful API 接口，完成从需求分析到联调测试的全流程开发
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </main>
+        
+        <!-- 页脚 -->
+        <footer class="footer">
+            <p>© 2025 梁同学 | 个人简历</p>
+        </footer>
+    </div>
+</body>
+</html>
